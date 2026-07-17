@@ -441,3 +441,124 @@ transform:none;
 }
 
 }
+/* ==========================
+   BOOKING
+========================== */
+
+.booking{
+
+padding:120px 10%;
+
+background:#090909;
+
+}
+
+.booking-container{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.booking h2{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.booking-subtitle{
+
+text-align:center;
+
+opacity:.7;
+
+margin-bottom:60px;
+
+}
+
+.input-group{
+
+margin-bottom:25px;
+
+}
+
+.booking input,
+.booking textarea,
+.booking select{
+
+width:100%;
+
+padding:18px;
+
+background:#111;
+
+border:1px solid #333;
+
+color:white;
+
+font-size:16px;
+
+transition:.35s;
+
+}
+
+.booking input:focus,
+.booking textarea:focus,
+.booking select:focus{
+
+outline:none;
+
+border-color:#b58b57;
+
+}
+
+.booking textarea{
+
+resize:none;
+
+}
+
+.booking-btn{
+
+width:100%;
+
+padding:18px;
+
+background:#b58b57;
+
+color:white;
+
+font-size:18px;
+
+border:none;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.booking-btn:hover{
+
+background:#d6a66d;
+
+}
+
+.success-message{
+
+display:none;
+
+margin-top:25px;
+
+text-align:center;
+
+color:#b58b57;
+
+font-size:18px;
+
+}
