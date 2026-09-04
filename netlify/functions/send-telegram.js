@@ -94,13 +94,13 @@ if (!telegramResponse.ok || !telegramResult.ok) {
 
     } catch (error) {
 
-        console.error(error);
+    console.error("TELEGRAM ERROR:", error);
 
-        return new Response(
-            JSON.stringify({
-                success: false,
-                error: "Ошибка сервера"
-            }),
+    return new Response(
+        JSON.stringify({
+            success: false,
+            error: error.message || "Ошибка сервера"
+        }),
             {
                 status: 500,
 
