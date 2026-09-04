@@ -68,13 +68,15 @@ ${message || "Нет сообщения"}
         );
 
 
-        if (!telegramResponse.ok) {
+        const telegramResult = await telegramResponse.json();
 
-            throw new Error(
-                "Ошибка при отправке сообщения в Telegram"
-            );
+if (!telegramResponse.ok || !telegramResult.ok) {
 
-        }
+    throw new Error(
+        `Telegram: ${telegramResult.description || "Неизвестная ошибка"}`
+    );
+
+}
 
 
         return new Response(
