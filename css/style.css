@@ -877,7 +877,8 @@ section {
     .full-gallery {
         width: 92%;
 
-        column-count: 1;
+        column-count: 3;
+        column-gap: 10px;
     }
 
     .full-gallery-item {
@@ -955,11 +956,12 @@ section {
     /* HEADER */
 
     .header {
+        top: 0;
+        margin-top: 0;
         padding: 20px;
-
         flex-direction: column;
-
         gap: 15px;
+        background: rgba(0, 0, 0, 0.92);
     }
 
     nav {
@@ -982,7 +984,7 @@ section {
     }
 
     .hero {
-        background-position: center;
+        background-position: right center;
     }
 
     .buttons {
@@ -1085,7 +1087,8 @@ section {
     .full-gallery {
         width: 92%;
 
-        column-count: 1;
+        column-count: 3;
+        column-gap: 10px;
     }
 
     .full-gallery-item {
