@@ -109,7 +109,7 @@ if (bookingForm) {
         try {
 
             const response = await fetch(
-                "/.netlify/functions/send-telegram",
+                "https://brilliant-ganache-2c83d3.netlify.app/.netlify/functions/send-telegram",
                 {
 
                     method: "POST",
