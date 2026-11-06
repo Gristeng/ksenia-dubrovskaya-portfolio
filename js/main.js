@@ -195,3 +195,49 @@ if (bookingForm) {
     });
 
 }
+/* =========================================
+   LAZY LOAD PORTFOLIO IMAGES
+========================================= */
+
+const lazyImages = document.querySelectorAll(
+    ".full-gallery-item img[data-src]"
+);
+
+if ("IntersectionObserver" in window) {
+
+    const imageObserver = new IntersectionObserver(
+        function (entries, observer) {
+
+            entries.forEach(function (entry) {
+
+                if (!entry.isIntersecting) return;
+
+                const image = entry.target;
+
+                image.src = image.dataset.src;
+
+                image.addEventListener("load", function () {
+                    image.classList.add("loaded");
+                }, { once: true });
+
+                observer.unobserve(image);
+
+            });
+
+        },
+        {
+            rootMargin: "300px 0px"
+        }
+    );
+
+    lazyImages.forEach(function (image) {
+        imageObserver.observe(image);
+    });
+
+} else {
+
+    lazyImages.forEach(function (image) {
+        image.src = image.dataset.src;
+    });
+
+}
