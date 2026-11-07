@@ -1109,3 +1109,67 @@ section {
 .full-gallery-item img.loaded {
     opacity: 1;
 }
+
+
+/* =========================================
+   FIXED PORTFOLIO GALLERY COLUMNS
+========================================= */
+
+.full-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    column-count: unset;
+    column-width: unset;
+
+    column-gap: 22px;
+    align-items: start;
+}
+
+.full-gallery-column {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    gap: 22px;
+}
+
+.full-gallery-item {
+    display: block;
+    width: 100%;
+    margin: 0;
+
+    break-inside: auto;
+}
+
+
+/* TABLET — TWO COLUMNS */
+
+@media (min-width: 769px) and (max-width: 1000px) {
+
+    .full-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 20px;
+    }
+
+    .full-gallery-column {
+        gap: 20px;
+    }
+
+}
+
+
+/* MOBILE — THREE COLUMNS */
+
+@media (max-width: 768px) {
+
+    .full-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 10px;
+    }
+
+    .full-gallery-column {
+        gap: 18px;
+    }
+
+}
